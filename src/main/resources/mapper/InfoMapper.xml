@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmq.dao.InfoMapper">
+ 
+
+
+
+  <select id="findInfo" resultType="com.lmq.model.Info">
+    select name, age,id from Info;
+  </select>
+
+<update id="updateInfo" parameterType="com.lmq.model.Info">
+  update info set name=#{name},age=#{age} where id=#{id}
+</update>
+
+</mapper>
